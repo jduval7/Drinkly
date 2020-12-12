@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Random</ion-title>
+    <ion-buttons end>
+      <button routerLink="/" routerDirection="back">
+        <ion-icon name="arrow-back-outline" routerLink="/" routerDirection="back"></ion-icon>
+        <!-- <ion-icon name="person"></ion-icon> -->
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content id="content">
+  
+    <ion-card *ngFor="let drinks of data?.drinks">
+      <ion-img [src]="drinks.strDrinkThumb"></ion-img>
+      <ion-card-content>
+        <p id="drinkName">{{drinks.strDrink}}</p>
+        <div id="ingredients">
+          <p>{{drinks.strMeasure1}}{{drinks.strIngredient1}}</p>
+          <p>{{drinks.strMeasure2}}{{drinks.strIngredient2}}</p>
+          <p>{{drinks.strMeasure3}}{{drinks.strIngredient3}}</p>
+          <p>{{drinks.strMeasure4}}{{drinks.strIngredient4}}</p>
+          <p>{{drinks.strMeasure5}}{{drinks.strIngredient5}}</p>
+          <p>{{drinks.strMeasure6}}{{drinks.strIngredient6}}</p>
+          <p>{{drinks.strMeasure7}}{{drinks.strIngredient7}}</p>
+          <p>{{drinks.strMeasure8}}{{drinks.strIngredient8}}</p>
+          <p>{{drinks.strMeasure9}}{{drinks.strIngredient9}}</p>
+          <p>{{drinks.strMeasure10}}{{drinks.strIngredient10}}</p>
+        </div>
+        <p>{{drinks.strInstructions}}</p>
+        
+      </ion-card-content>
+     
+    </ion-card>
+
+    <ion-button id="infoButton" expand="full" (click)="ngOnInit()">Search Again</ion-button>
+
+
+  
+
+
+</ion-content>

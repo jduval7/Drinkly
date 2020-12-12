@@ -1,0 +1,33 @@
+ion-title {
+    font-family: 'Molle', cursive;
+    color: #aee0e8;
+  }
+
+  ion-content {
+    --background: url("/assets/img/bar.jpg") no-repeat center center / cover;
+  }
+  
+ion-list {
+
+  }
+
+.login-div {
+    background: black;
+}
+
+ion-button {
+    --background: rgba(10, 53, 66, 0.93);
+    color: #aee0e8;
+    font-family: 'Kalam', cursive;
+    font-size: x-large;
+    padding-top: 8px;
+  }
+
+h1 {
+    font-size: 5em;
+    font-family: 'Molle', cursive;
+    color: #aee0e8;
+    padding-left: .7em;
+    padding-top: 1.2em;
+    text-shadow: 4px 4px 5px black;
+}

@@ -1,0 +1,39 @@
+ion-icon {
+    margin-right: .22em;
+    font-size: 25px;
+}
+
+button {
+    background: none;
+    color: #aee0e8;
+    font-family: 'Kalam', cursive;
+  }
+
+ion-content {
+    --background: url("/assets/img/bar.jpg") no-repeat center center / cover;
+}
+
+ion-title {
+    font-family: 'Molle', cursive;
+    color: #aee0e8;
+    font-size: 25px;
+  }
+
+  ion-card {
+    border: 2px solid grey;
+    
+}
+
+#drinkName {
+    font-weight: bold;
+    color: #a967aa;
+    border-bottom: solid 1px white;
+    padding-bottom: 4px;
+}
+
+#ingredients {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 5rem;
+
+}

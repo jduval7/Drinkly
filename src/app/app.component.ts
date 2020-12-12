@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { MenuController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+import { Flashlight } from '@ionic-native/flashlight/ngx';
+
 
 @Component({
   selector: 'app-root',
@@ -13,57 +16,69 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
-    },
-    {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'Drinks',
+      url: '/home',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Ingredients',
+      url: '/ingredients',
+      icon: 'paper-plane'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Random',
+      url: '/random',
+      icon: 'paper-plane'
     }
+    
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private menu: MenuController,
+    private flashlight: Flashlight
   ) {
-    this.initializeApp();
+   // this.initializeApp();
   }
 
-  initializeApp() {
+/*  initializeApp() {
+
+    firebase.initializeApp({
+      apiKey: "AIzaSyDxkTKcgFdHrI0KQnukntA52reTXH2g0NU",
+      authDomain: "finale2-56cce.firebaseapp.com",
+      databaseURL: "https://finale2-56cce.firebaseio.com",
+      projectId: "finale2-56cce",
+      storageBucket: "finale2-56cce.appspot.com",
+      messagingSenderId: "630839493079",
+      appId: "1:630839493079:web:b010b91cb4e3b913e10b92",
+      measurementId: "G-MPYLV61XVZ"
+    })
+
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
 
+*/
+
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    
   }
+
+  /*
+  logout() {
+    firebase.auth().signOut();
+    this.menu.close();
+    console.log(firebase.auth().signOut());
+  }
+*/
+
+  flash() {
+    this.flashlight.toggle();
+   }
+
 }

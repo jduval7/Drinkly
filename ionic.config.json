@@ -1,5 +1,7 @@
 {
   "name": "finale",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

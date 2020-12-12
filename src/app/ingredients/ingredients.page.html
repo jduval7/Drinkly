@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingredients</ion-title>
+    <ion-buttons end>
+      <button routerLink="/" routerDirection="back">
+        <ion-icon name="arrow-back-outline" routerLink="/" routerDirection="back"></ion-icon>
+        <!-- <ion-icon name="person"></ion-icon> -->
+      </button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content id="content">
+  <ion-searchbar [(ngModel)]="searchQuery" (keyup)="upDateList($event)"></ion-searchbar>
+  <ion-card *ngFor="let ingredients of data?.ingredients">
+    <ion-card-content>
+      <p id="drinkName">{{ingredients.strIngredient}}</p>
+      <div id="ingredients">
+      <p>{{ingredients.strDescription}}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

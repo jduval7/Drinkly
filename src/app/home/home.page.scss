@@ -1,0 +1,64 @@
+#button {
+    background: none;
+    color: aqua;
+}
+
+#drinkName {
+    font-weight: bold;
+    color: #a967aa;
+    border-bottom: solid 1px white;
+    padding-bottom: 4px;
+}
+
+#ingredients {
+    border-bottom: dashed 1px white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+ion-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+#back {
+    font-family: 'Kalam', cursive;
+    color: #aee0e8;
+    background: none;
+}
+
+ion-title {
+    font-family: 'Molle', cursive;
+    color: #aee0e8;
+  }
+
+ion-icon {
+    margin-right: .22em;
+    font-size: 25px;
+}
+
+ion-button {
+    --background: rgba(10, 53, 66, 0.93);
+    color: #aee0e8;
+    font-family: 'Kalam', cursive;
+
+  }
+
+#ingredients {
+    color: #aee0e8;
+    font-family: 'Kalam', cursive;
+    font-size: 2em;
+}
+
+ion-content {
+    --background: url("/assets/img/bar.jpg") no-repeat center center / cover;
+  }
+  
+ion-card {
+    border: 2px solid grey;
+    
+}
+
+button#back {
+    font-size: 18px;
+}
